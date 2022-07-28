@@ -1,5 +1,5 @@
 [options]
-addons_path = /opt/odoo/15.0/odoo/addons,/opt/odoo/15.0/addons,/home/aplanes/cowork/proyecto3
+addons_path = /opt/odoo/15.0/odoo/addons,/opt/odoo/15.0/addons,/home/aplanes/cowork/proyectoTienda
 admin_passwd = $pbkdf2-sha512$25000$PmdMqTUG4JwTgrC29v5fSw$PxMcPfi3qfySCer/qK0E6Y4g74XGqTJ0B9W0MWil2uXLEdYYEL3uZ.9tuQHZmyUS6eXZC0mpb3laChgkfbEcUQ
 csv_internal_sep = ,
 data_dir = /home/aplanes/.local/share/Odoo

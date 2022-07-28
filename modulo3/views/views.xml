@@ -1,7 +1,7 @@
 <odoo>
   <data>
     <!-- Nombre de la APP -->
-    <menuitem name="Gestión de la tienda" id="modulo3.menu_root"/>
+    <menuitem name="Tienda de impresoras" id="modulo3.menu_root"/>
 
 
     <!-- Tree impresoras -->
@@ -193,8 +193,8 @@
       <field name="view_mode">tree</field>
     </record>
 
-    <!-- Seccion impresora de la app 
-    <menuitem name="Tipos de impresoras" id="modulo3.menu_2_list" parent="modulo3.menu_root" action="modulo3.action_list_printers_types"/> -->
+    <!-- Seccion impresora de la app -->
+    <menuitem name="Tipos de impresoras" id="modulo3.menu_2_list" parent="modulo3.menu_root" action="modulo3.action_list_printers_types"/> 
 
 
 
