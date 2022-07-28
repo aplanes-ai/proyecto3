@@ -63,7 +63,7 @@ class Impresora(models.Model):
      impresora_paquete_cableusb = fields.Boolean(string = "Cable USB" , default = False)
      impresora_paquete_cdsoftware = fields.Boolean(string = "CD Software" , default = False)
 
-     #Consumo y energía
+     #Consumo y energía de la impresora
      impresora_consumo_encendida = fields.Float(string = "Consumo de energía en W" , default = False)
      impresora_consumo_suspension = fields.Float(string = "Consumo en modo suspensión en W" , default = False)
 
