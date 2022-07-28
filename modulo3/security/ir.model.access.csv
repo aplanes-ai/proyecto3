@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+modulo3.access_modulo3_impresora,access_modulo3_impresora,modulo3.model_modulo3_impresora,base.group_user,1,1,1,1
+modulo2.access_modulo3_impresora_public,access_modulo3_impresora_public,modulo3.model_modulo3_impresora,base.group_public,1,0,0,0
+
+modulo3.access_modulo3_tipoimpresora,access_modulo3_tipoimpresora,modulo3.model_modulo3_tipoimpresora,base.group_user,1,1,1,1
+modulo2.access_modulo3_tipoimpresora_public,access_modulo3_tipoimpresora_public,modulo3.model_modulo3_tipoimpresora,base.group_public,1,0,0,0

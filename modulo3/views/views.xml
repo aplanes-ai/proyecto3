@@ -1,0 +1,203 @@
+<odoo>
+  <data>
+    <!-- Nombre de la APP -->
+    <menuitem name="Gestión de la tienda" id="modulo3.menu_root"/>
+
+
+    <!-- Tree impresoras -->
+    <record model="ir.ui.view" id="impresoras_list">
+      <field name="name">Lista de impresoras</field>
+      <field name="model">modulo3.impresora</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="impresora_tipo"/>
+
+          <field name="impresora_fcolor"/>
+          <field name="impresora_fwifi"/>
+          <field name="impresora_ftarjetared"/>
+          <field name="impresora_fduplex"/>
+          <field name="impresora_velocidad"/>
+
+          <field name="impresora_pvp"/>
+          <field name="impresora_precioproveedor"/>
+          <field name="impresora_codigo"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Fornulario de impresoras -->
+    <record id="impresoras_form" model="ir.ui.view">
+      <field name="name">impresoras.form</field>
+      <field name="model">modulo3.impresora</field>
+      <field name="arch" type="xml">
+      <header>
+      </header>
+        <sheet string="Impresora">
+          <notebook>
+            <page string="Características principales">
+              <separator string="Características principales"/>
+              <group>
+                <group>
+                  <group>
+                    <field name="name"/>
+                    <field name="impresora_tipo"/>
+                    <field name="impresora_pvp"/>
+                    <field name="impresora_precioproveedor"/>
+                    <field name="impresora_codigo"/>
+                  </group>
+                  <group>
+                    <field name="impresora_resolucion"/>
+                    <field name="impresora_fcolor"/>
+                    <field name="impresora_fwifi"/>
+                    <field name="impresora_ftarjetared"/>
+                    <field name="impresora_fduplex"/>
+                    <field name="impresora_velocidad"/>
+                  </group>
+                </group>
+              </group>
+            </page>
+
+            <page string="Todas las características">
+              <separator string="Especificaciones técnicas"/>
+              <group>
+                <group>
+                  <group>
+                    <field name="name"/>
+                    <field name="impresora_tipo"/>
+                    <field name="impresora_pvp"/>
+                    <field name="impresora_precioproveedor"/>
+                    <field name="impresora_codigo"/>
+                  </group>
+                  <!-- Característicasa técnicas principales-->
+                  <group>
+                    <field name="impresora_resolucion"/>
+                    <field name="impresora_fcolor"/>
+                    <field name="impresora_fwifi"/>
+                    <field name="impresora_ftarjetared"/>
+                    <field name="impresora_fduplex"/>
+                    <field name="impresora_velocidad"/>
+                  </group>
+                </group>
+              </group>
+              <!-- Resto de características -->
+              <group>
+                <group>
+                  <group>
+                    <separator string="Conectividad"/>
+                    <field name="impresora_fwifi"/>
+                    <field name="impresora_ftarjetared"/>
+                    <field name="impresora_puertosusb"/>
+                    <field name="impresora_fbluetooth"/>
+                  </group>
+
+                  <group>
+                    <separator string="Escaneo"/>
+                    <field name="impresora_fescaneo"/>
+                    <field name="impresora_fescaneoformato"/>
+                  </group>
+
+                  <group>
+                    <separator string="Velocidad impresión"/>
+                    <field name="impresora_velocidad"/>
+                    <field name="impresora_velocidadcolor"/>
+                  </group>
+
+
+                  <group>
+                    <separator string="FAX"/>
+                    <field name="impresora_ffax"/>
+                    <field name="impresora_ffax1"/>
+                    <field name="impresora_ffax2"/>
+                  </group>
+                </group>
+                <group>
+                  <group>
+                    <separator string="Pantalla táctil"/>
+                    <field name="impresora_ftouchscreen"/>
+                    <field name="impresora_ftouchscreencolor"/>
+                  </group>
+
+                  <group>
+                    <separator string="Ruidosidad"/>
+                    <field name="impresora_ruidosidad"/>
+                    <field name="impresora_ruidosidad1"/>
+                    <field name="impresora_ruidosidad2"/>
+                  </group>
+
+                  <group>
+                    <separator string="Dimensiones y peso"/>
+                    <field name="impresora_ancho"/>
+                    <field name="impresora_profundidad"/>
+                    <field name="impresora_altura"/>
+                    <field name="impresora_peso"/>
+                  </group>
+
+                  <group>
+                    <separator string="Se incluye en la compra"/>
+                    <field name="impresora_paquete_bateria"/>
+                    <field name="impresora_paquete_cablered"/>
+                    <field name="impresora_paquete_cablealimentacion"/>
+                    <field name="impresora_paquete_cableusb"/>
+                    <field name="impresora_paquete_cdsoftware"/>
+                  </group>
+                </group>
+
+                <group>
+                  <separator string="Requisitos y consumo de energía"/>
+                  <field name="impresora_consumo_encendida"/>
+                  <field name="impresora_consumo_suspension"/>
+                </group>
+
+              </group>
+            </page>
+          </notebook>
+
+
+        </sheet>
+      </field>
+    </record>
+
+    <!-- Action de la seccion impresoras de la app -->
+    <record model="ir.actions.act_window" id="modulo3.action_list_printers">
+      <field name="name">Impresoras</field>
+      <field name="res_model">modulo3.impresora</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Seccion impresora de la app -->
+    <menuitem name="Impresoras" id="modulo3.menu_1_list" parent="modulo3.menu_root" action="modulo3.action_list_printers"/>
+
+
+
+
+
+
+    <!-- Tree tipos de impresoras -->
+    <record model="ir.ui.view" id="tiposimpresoras_list">
+      <field name="name">Tipos de impresoras</field>
+      <field name="model">modulo3.tipoimpresora</field>
+      <field name="arch" type="xml">
+        <tree editable="top">
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- No tiene form, tiene editable top -->
+
+    <!-- Action de la seccion tipos de impresoras de la app -->
+    <record model="ir.actions.act_window" id="modulo3.action_list_printers_types">
+      <field name="name">Tipos de impresoras</field>
+      <field name="res_model">modulo3.tipoimpresora</field>
+      <field name="view_mode">tree</field>
+    </record>
+
+    <!-- Seccion impresora de la app 
+    <menuitem name="Tipos de impresoras" id="modulo3.menu_2_list" parent="modulo3.menu_root" action="modulo3.action_list_printers_types"/> -->
+
+
+
+
+  </data>
+</odoo>
