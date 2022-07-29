@@ -1,12 +1,45 @@
 <odoo>
   <data>
 
-    <!-- Template pagina principal -->
-    <template id="idtienda">
+
+
+    <!-- Página principal -->
+    <template id="inicio">
       <t t-call="website.layout">
         <div id="wrap">
           <div class="container">
-            <h1>Impresoras a la venta</h1>
+
+            <br></br>            <!-- Separación inicial -->
+
+            <p style="font-size:40px;">       
+                <b>Busqueda por categorias:</b>
+            </p>
+
+            <p style="font-size:30px;">
+              <a href="/impresoras">Impresoras</a>
+            </p>
+
+            <p style="font-size:30px;">
+              <a href="/movilidad">Movilidad</a>
+            </p>
+
+            <br></br>            <!-- Separación final -->
+
+          </div>
+        </div>
+      </t>
+    </template>
+
+
+
+    <!-- Página impresoras -->
+    <template id="impresoras">
+      <t t-call="website.layout">
+        <div id="wrap">
+          <div class="container">
+            <p style="font-size:30px;">
+              <a>Impresoras</a>
+            </p>
           </div>
         </div>
       </t>

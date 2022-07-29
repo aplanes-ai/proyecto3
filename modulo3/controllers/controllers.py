@@ -3,19 +3,20 @@ from odoo import http
 from odoo.http import request
 
 
-class action1(http.Controller):
-     @http.route('/tienda', auth='public' , website=True)       
-     def principal(self, **kw):
-        impresora = request.env["modulo3.impresora"]
-        impresoras = impresora.search([])
 
-        
-        return http.request.render('modulo3.idtienda', { 'impresoras':impresoras} )
 
-# class Modulo3(http.Controller):
-#     @http.route('/modulo3/modulo3', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
+class PaginaInicio(http.Controller):
+     @http.route('/inicio', auth='public' , website=True)       
+     def pagina_inicio(self, **kw):
+        return http.request.render('modulo3.inicio')
+
+
+class PaginaImpresoras(http.Controller):
+     @http.route('/impresoras', auth='public' , website=True)       
+     def pagina_impresoras(self, **kw):
+        return http.request.render('modulo3.impresoras')
+
+
 
 #     @http.route('/modulo3/modulo3/objects', auth='public')
 #     def list(self, **kw):
