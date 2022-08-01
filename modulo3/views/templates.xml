@@ -10,19 +10,9 @@
           <div class="container">
 
             <br></br>            <!-- Separación inicial -->
-
-            <p style="font-size:40px;">       
-                <b>Busqueda por categorias:</b>
-            </p>
-
-            <p style="font-size:30px;">
-              <a href="/impresoras">Impresoras</a>
-            </p>
-
-            <p style="font-size:30px;">
-              <a href="/movilidad">Movilidad</a>
-            </p>
-
+            <p style="font-size:40px; color:#107200"><u><b>Busqueda por categorias:</b></u></p>
+            <p style="color:#19B500"><b><a href="/tiposimpresoras"  style="font-size:30px;color:#19B500">Impresoras</a></b></p>
+            <p style="font-size:20px; color:#000000"><b><a href="/movilidad"  style="font-size:30px;color:#19B500">Movilidad</a>    (patinetes eléctricos)</b></p>
             <br></br>            <!-- Separación final -->
 
           </div>
