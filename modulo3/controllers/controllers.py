@@ -5,16 +5,18 @@ from odoo.http import request
 
 
 
-class PaginaInicio(http.Controller):
+class Paginas(http.Controller):
      @http.route('/inicio', auth='public' , website=True)       
      def pagina_inicio(self, **kw):
-        return http.request.render('modulo3.inicio')
+        return http.request.render('modulo3.pagina_inicio')
+
+     @http.route('/inicio/impresoras', auth='public' , website=True)       
+     def pagina_tipos_impresoras(self, **kw):
+        tipoimpresora = request.env["modulo3.tipoimpresora"]
+        tiposimpresoras = tipoimpresora.search([])
+        return http.request.render('modulo3.pagina_tipos_impresoras', { 'tiposimpresoras':tiposimpresoras } )
 
 
-class PaginaImpresoras(http.Controller):
-     @http.route('/impresoras', auth='public' , website=True)       
-     def pagina_impresoras(self, **kw):
-        return http.request.render('modulo3.impresoras')
 
 
 

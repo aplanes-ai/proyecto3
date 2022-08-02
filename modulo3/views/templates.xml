@@ -4,36 +4,57 @@
 
 
     <!-- Página principal -->
-    <template id="inicio">
+    <template id="pagina_inicio">
       <t t-call="website.layout">
         <div id="wrap">
           <div class="container">
-
             <br></br>            <!-- Separación inicial -->
-            <p style="font-size:40px; color:#107200"><u><b>Busqueda por categorias:</b></u></p>
-            <p style="color:#19B500"><b><a href="/tiposimpresoras"  style="font-size:30px;color:#19B500">Impresoras</a></b></p>
-            <p style="font-size:20px; color:#000000"><b><a href="/movilidad"  style="font-size:30px;color:#19B500">Movilidad</a>    (patinetes eléctricos)</b></p>
+            <p style="font-size:40px; color:#107200">
+              <u>
+                <b>Busqueda por categorias:</b>
+              </u>
+            </p>
+            <p style="color:#19B500">
+              <b>
+                <a href="/inicio/impresoras" style="font-size:30px;color:#19B500">Impresoras</a>
+              </b>
+            </p>
+            <p style="font-size:20px; color:#000000">
+              <b>
+                <a href="/inicio/movilidad" style="font-size:30px;color:#19B500">Movilidad</a>    (PATINETES ELECTRICOS)</b>
+            </p>
             <br></br>            <!-- Separación final -->
-
           </div>
         </div>
       </t>
     </template>
 
-
-
-    <!-- Página impresoras -->
-    <template id="impresoras">
+    <!-- Página con la lista de los tipos de impresoras -->
+    <template id="pagina_tipos_impresoras">
       <t t-call="website.layout">
         <div id="wrap">
           <div class="container">
-            <p style="font-size:30px;">
-              <a>Impresoras</a>
+            <p style="font-size:40px; color:#107200">
+              <u>
+                <b>Eliga tipo de impresora:</b>
+              </u>
             </p>
+            <t t-foreach="tiposimpresoras" t-as="tipoimpresora">
+              <p>
+                <a style="font-size:30px;color:#19B500" t-att-href="'/inicio/impresoras/%d' % tipoimpresora.id">
+                  <b>
+                    <t style="font-size:30px;color:#19B500" t-esc="tipoimpresora.name"/>
+                  </b>
+                </a>
+              </p>
+            </t>
           </div>
         </div>
       </t>
     </template>
+
+
+
 
 
 
